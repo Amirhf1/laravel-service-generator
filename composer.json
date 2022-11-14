@@ -1,0 +1,54 @@
+{
+    "name": "amirhf/laravel-service-generator",
+    "description": "a simple service generator at laravel ",
+    "keywords": [
+        "amirhf",
+        "laravel-service-generator"
+    ],
+    "homepage": "https://github.com/amirhf/laravel-service-generator",
+    "license": "Apache-2.0",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Amirhf",
+            "email": "amirhf12x@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Amirhf\\LaravelServiceGenerator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Amirhf\\LaravelServiceGenerator\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Amirhf\\LaravelServiceGenerator\\LaravelServiceGeneratorServiceProvider"
+            ],
+            "aliases": {
+                "LaravelServiceGenerator": "Amirhf\\LaravelServiceGenerator\\LaravelServiceGeneratorFacade"
+            }
+        }
+    }
+}
